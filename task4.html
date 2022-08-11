@@ -22,7 +22,7 @@
     let sentence = line.split(' ');//масив зі слів в реченні  
     let wordsLength = [];
 
-    for(let i = 0; i == sentence.length; i++){//прохід по кожному слову
+    for(let i = 0; i < sentence.length; i++){//прохід по кожному слову
         let wordArr = Array.from(sentence[i]); //масив з букв з і-того слова     
         wordsLength.push(wordArr.length);//запис довжини масива зі слова в окремий масив для довжин слів
     }
