@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+    <script>
+    /*2. "Дезоксирибонуклеїнова кислота (ДНК) — це хімічна речовина, 
+    що міститься в ядрі клітин і несе «інструкції» для розвитку та функціонування живих організмів.
+    Якщо ви хочете дізнатися більше, http://en.wikipedia.org/wiki/DNA
+    У рядках ДНК символи «А» і «Т» доповнюють один одного, як «С» і «G». 
+    У вас є функція з однією стороною ДНК - вам потрібно отримати іншу комплементарну сторону. 
+    Нитку ДНК ніколи не буває порожнім або ДНК взагалі немає.
+    Приклад:
+    DNA_strand(""ATTGC"") # повертає ""TAACG""
+    DNA_strand(""GTAT"") # повертає ""CATA"" "*/
+
+    let dna = prompt("Enter DNA using A, C, G and T:")
+    dnaArray = Array.from(dna);
+    let answer = [];
+
+    for(let i = 0; i <= dnaArray.length; i++){
+        switch(dnaArray[i]){
+            case "A": answer.push("T");
+            break;
+            case "T": answer.push("A");
+            break;
+            case "C": answer.push("G");
+            break;
+            case "G": answer.push("C");
+            break;
+            default : alert("Use only A, C, G and T!")//ERROR - виводить це повідомлення завжди, навіть при виконанні умови
+            break;
+        }
+    }
+    alert(answer);
+    </script>
+</body>
+</html>

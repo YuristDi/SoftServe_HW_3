@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <script>
+    /* 1. "Створіть веб-програму, в якій користувач вводить ширину та символ. 
+    Вивести в консоль лінію заданої ширини заданим символом"*/
+    let width = Number(prompt("Enter width"));
+    let symbol = prompt("Enter any symbol");
+
+    if(0 < width){
+        let line = [];
+        for(let i = 1; i <= width; i++){
+            line.push(symbol);
+        }
+        console.log(line);
+    }else{
+        console.log("Enter a number greater than 0 as width")
+    }
+    </script>
+</body>
+</html>

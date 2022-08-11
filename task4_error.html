@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    
+    <script>
+/*4. "Напишіть функцію, що отримує у якості аргумента рядок слів та повертає довижину найкоротшого
+
+Приклад:
+""bitcoin take over the world maybe who knows perhaps"" --> 3
+""turns out random test cases are easier than writing out basic ones"" --> 3
+""lets talk about javascript the best language"" --> 3
+""i want to travel the world writing code one day"" --> 1
+""Lets all go on holiday somewhere very cold"" --> 2" */
+
+    let line = prompt("Enter a sentence to get a length of smallest word:");
+    let sentence = line.split(' ');//масив зі слів в реченні  
+    let wordsLength = [];
+
+    for(let i = 0; i == sentence.length; i++){//прохід по кожному слову
+        let wordArr = Array.from(sentence[i]); //масив з букв з і-того слова     
+        wordsLength.push(wordArr.length);//запис довжини масива зі слова в окремий масив для довжин слів
+    }
+
+    wordsLength.sort((a, b)=> a-b);//сортування по масиву з довжинами слів
+    alert(wordsLength[0]);//результат undefined
+    </script>
+</body>
+</html>
